@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
 cout << "To start the auto-clicking press space to stop press space again to change the start/stop key press c\n";
+
 bool start = true;
 while (start)
 {
