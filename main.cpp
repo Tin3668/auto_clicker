@@ -8,17 +8,18 @@ int main()
 
     bool start = true;
     bool pause = false;
+    char startStop = ' '; /*change this to change the button to start*/
 
     while (start)
     {
-        if (GetKeyState(' '))
+        if (GetKeyState(startStop))
         {
             do
             {
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
                 Sleep(10);
                 mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            } while (GetKeyState(' '));
+            } while (GetKeyState(startStop));
             start = false;
             break;
         }
